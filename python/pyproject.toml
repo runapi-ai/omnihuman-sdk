@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "runapi-omnihuman"
+version = "0.1.1"
+description = "RunAPI OmniHuman SDK for audio-to-video and image helper workflows in JavaScript, Python, Ruby, Go, Java, and PHP"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+authors = [{ name = "RunAPI", email = "contact@runapi.ai" }]
+keywords = ["runapi", "runapi-ai", "omnihuman", "api", "sdk", "typescript", "python", "ruby", "golang", "java", "maven", "gradle", "video-generation", "audio-to-video", "video-api", "omnihuman-api"]
+dependencies = ["runapi-core>=0.1.4"]
+
+[project.urls]
+Homepage = "https://runapi.ai/models/omnihuman"
+Documentation = "https://runapi.ai/docs#sdk-omnihuman"
+Source = "https://github.com/runapi-ai/omnihuman-sdk"
+Issues = "https://github.com/runapi-ai/omnihuman-sdk/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/runapi"]
+
+[tool.uv]
+package = true
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.runapi]
+slug = "omnihuman"
