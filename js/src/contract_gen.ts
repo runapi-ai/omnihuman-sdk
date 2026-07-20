@@ -5,6 +5,9 @@ export const contract = {
     ],
     "fields_by_model": {
       "omnihuman-1.5": {
+        "mask_urls": {
+          "max_items": 5
+        },
         "output_resolution": {
           "enum": [
             "720p",

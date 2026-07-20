@@ -3,7 +3,7 @@
   "runapi": {
     "slug": "omnihuman"
   },
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "RunAPI OmniHuman SDK for audio-to-video and image helper workflows in JavaScript, Python, Ruby, Go, Java, and PHP",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -31,7 +31,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@runapi.ai/core": "^0.2.11"
+    "@runapi.ai/core": "^0.2.14"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

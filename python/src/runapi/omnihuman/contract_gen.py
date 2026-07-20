@@ -3,6 +3,9 @@ CONTRACT = {
         "models": ["omnihuman-1.5"],
         "fields_by_model": {
             "omnihuman-1.5": {
+                "mask_urls": {
+                    "max_items": 5
+                },
                 "output_resolution": {
                     "enum": ["720p", "1080p"]
                 },

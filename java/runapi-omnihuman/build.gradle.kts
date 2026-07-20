@@ -3,6 +3,8 @@ plugins {
   `maven-publish`
 }
 
+extra["runapiSlug"] = "omnihuman"
+
 description = "RunAPI OmniHuman Java SDK for OmniHuman workflows."
 
 java {
@@ -11,7 +13,7 @@ java {
 }
 
 dependencies {
-  api("ai.runapi:runapi-core:0.1.5")
+  api("ai.runapi:runapi-core:0.2.2")
 
   testImplementation(platform("org.junit:junit-bom:5.10.3"))
   testImplementation("org.junit.jupiter:junit-jupiter")
