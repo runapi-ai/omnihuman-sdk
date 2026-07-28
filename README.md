@@ -112,8 +112,8 @@ OmniHuman media endpoints are asynchronous. `create()` submits a task and return
 ## Public links
 
 - Model page: https://runapi.ai/models/omnihuman
-- SDK docs: https://runapi.ai/docs#sdk-omnihuman
-- Product docs: https://runapi.ai/docs#omnihuman
+- SDK docs: https://runapi.ai/docs/resources/sdks
+- Product docs: https://runapi.ai/docs/api/omnihuman/audio-to-video
 - SDK repository: https://github.com/runapi-ai/omnihuman-sdk
 - PHP package repository: https://github.com/runapi-ai/omnihuman-php
 - Skill repository: https://github.com/runapi-ai/omnihuman

@@ -61,8 +61,8 @@ runapi wait <task-id> --service omnihuman --action audio-to-video
 ## Routing
 
 - Model page: https://runapi.ai/models/omnihuman
-- Product docs: https://runapi.ai/docs#omnihuman
-- SDK docs: https://runapi.ai/docs#sdk-omnihuman
+- Product docs: https://runapi.ai/docs/api/omnihuman/audio-to-video
+- SDK docs: https://runapi.ai/docs/resources/sdks
 - SDK repository: https://github.com/runapi-ai/omnihuman-sdk
 - Audio-to-video pricing and rate limits: https://runapi.ai/models/omnihuman/1.5
 - Human-identification pricing and rate limits: https://runapi.ai/models/omnihuman/1.5-human-identification
