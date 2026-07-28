@@ -1,4 +1,4 @@
-import type { AsyncTaskStatus } from '@runapi.ai/core';
+import type { AsyncTaskStatus, TaskBillingResponse, TaskResponse } from '@runapi.ai/core';
 
 export type OmniHumanAudioToVideoModel = 'omnihuman-1.5';
 export type OmniHumanHumanIdentificationModel = 'omnihuman-1.5-human-identification';
@@ -45,7 +45,7 @@ export interface SubjectDetectionParams {
   callback_url?: string;
 }
 
-export interface TaskCreateResponse {
+export interface TaskCreateResponse extends TaskBillingResponse {
   id: string;
   status?: AsyncTaskStatus;
 }
@@ -60,7 +60,7 @@ export interface Mask {
   url: string;
 }
 
-export interface AudioToVideoResponse {
+export interface AudioToVideoResponse extends TaskResponse {
   id: string;
   status: AsyncTaskStatus;
   videos?: Video[];
@@ -73,7 +73,7 @@ export type CompletedAudioToVideoResponse = AudioToVideoResponse & {
   videos: Video[];
 };
 
-export interface HumanIdentificationResponse {
+export interface HumanIdentificationResponse extends TaskResponse {
   id: string;
   status: AsyncTaskStatus;
   subject_status?: number;
@@ -86,7 +86,7 @@ export type CompletedHumanIdentificationResponse = HumanIdentificationResponse &
   subject_status: number;
 };
 
-export interface SubjectDetectionResponse {
+export interface SubjectDetectionResponse extends TaskResponse {
   id: string;
   status: AsyncTaskStatus;
   masks?: Mask[];

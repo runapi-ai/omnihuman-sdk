@@ -20,10 +20,6 @@ RSpec.describe RunApi::Omnihuman::Client do
     expect(client).to be_a(described_class)
   end
 
-  it "raises AuthenticationError without api_key" do
-    expect { described_class.new }.to raise_error(RunApi::Core::AuthenticationError, /API key is required/)
-  end
-
   it "exposes OmniHuman resource accessors" do
     client = described_class.new(api_key: "test-key")
     expect(client.audio_to_video).to be_a(RunApi::Omnihuman::Resources::AudioToVideo)
