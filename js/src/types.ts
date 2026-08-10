@@ -15,7 +15,7 @@ export interface AudioToVideoParams {
   source_audio_url: string;
   /** Optional mask URLs from subject detection; at most 5 URLs. */
   mask_urls?: string[];
-  /** Optional generation guidance prompt. Up to 1000 characters. */
+  /** Optional generation guidance prompt. Up to 300 characters. */
   prompt?: string;
   /** Output resolution. Defaults to 1080p. */
   output_resolution?: OmniHumanOutputResolution;

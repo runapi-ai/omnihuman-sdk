@@ -15,7 +15,7 @@ export const contract = {
           ]
         },
         "prompt": {
-          "max": 1000,
+          "max": 300,
           "length": true
         },
         "seed": {

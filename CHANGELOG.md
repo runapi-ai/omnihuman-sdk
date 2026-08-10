@@ -1,5 +1,12 @@
 # Changelog
 
+## [js/v0.2.11](https://github.com/runapi-ai/omnihuman-sdk/releases/tag/js%2Fv0.2.11), [ruby/v0.2.11](https://github.com/runapi-ai/omnihuman-sdk/releases/tag/ruby%2Fv0.2.11), [go/v0.2.11](https://github.com/runapi-ai/omnihuman-sdk/releases/tag/go%2Fv0.2.11), [python/v0.2.2](https://github.com/runapi-ai/omnihuman-sdk/releases/tag/python%2Fv0.2.2), [java/v0.1.3](https://github.com/runapi-ai/omnihuman-sdk/releases/tag/java%2Fv0.1.3) - 2026-08-10
+
+### Breaking
+- Validate the 300-character prompt limit before creating an audio-to-video task.
+  Migration: Upgrade the SDK and shorten OmniHuman audio-to-video prompts to 300 characters or fewer.
+
+
 ## [python/v0.2.1](https://github.com/runapi-ai/omnihuman-sdk/releases/tag/python%2Fv0.2.1) - 2026-07-29
 
 ### Fixed

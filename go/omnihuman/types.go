@@ -77,7 +77,7 @@ type AudioToVideoParams struct {
 	SourceImageURL   string            `json:"source_image_url" help:"required; source image URL"`
 	SourceAudioURL   string            `json:"source_audio_url" help:"required; source audio URL"`
 	MaskURLs         []string          `json:"mask_urls,omitempty" help:"optional; subject mask URLs, max 5"`
-	Prompt           string            `json:"prompt,omitempty" help:"optional; max 1000 chars"`
+	Prompt           string            `json:"prompt,omitempty" help:"optional; max 300 chars"`
 	CallbackURL      string            `json:"callback_url,omitempty" help:"optional; webhook URL"`
 	OutputResolution OutputResolution  `json:"output_resolution,omitempty" help:"optional; 720p or 1080p"`
 	EnableFastMode   *bool             `json:"enable_fast_mode,omitempty" help:"optional; faster generation mode"`

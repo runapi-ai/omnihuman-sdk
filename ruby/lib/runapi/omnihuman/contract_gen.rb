@@ -14,7 +14,7 @@ module RunApi
               "enum" => ["720p", "1080p"]
             },
             "prompt" => {
-              "max" => 1000,
+              "max" => 300,
               "length" => true
             },
             "seed" => {

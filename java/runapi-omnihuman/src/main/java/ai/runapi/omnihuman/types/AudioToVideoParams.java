@@ -100,7 +100,7 @@ public final class AudioToVideoParams {
       return this;
     }
 
-    /** Sets the text prompt. */
+    /** Sets the text prompt, up to 300 characters. */
     public Builder prompt(String value) {
       this.prompt = OmnihumanParamUtils.requireNonBlank(value, "prompt");
       return this;
