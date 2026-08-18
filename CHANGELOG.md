@@ -1,5 +1,11 @@
 # Changelog
 
+## [ruby/v0.2.12](https://github.com/runapi-ai/omnihuman-sdk/releases/tag/ruby%2Fv0.2.12) - 2026-08-18
+
+### Changed
+- Allow Ruby clients to install the core SDK release that adds persistent Files and multipart Uploads alongside this model SDK.
+
+
 ## [js/v0.2.11](https://github.com/runapi-ai/omnihuman-sdk/releases/tag/js%2Fv0.2.11), [ruby/v0.2.11](https://github.com/runapi-ai/omnihuman-sdk/releases/tag/ruby%2Fv0.2.11), [go/v0.2.11](https://github.com/runapi-ai/omnihuman-sdk/releases/tag/go%2Fv0.2.11), [python/v0.2.2](https://github.com/runapi-ai/omnihuman-sdk/releases/tag/python%2Fv0.2.2), [java/v0.1.3](https://github.com/runapi-ai/omnihuman-sdk/releases/tag/java%2Fv0.1.3) - 2026-08-10
 
 ### Breaking
