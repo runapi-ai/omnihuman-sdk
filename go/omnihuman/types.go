@@ -33,7 +33,7 @@ const (
 
 // AsyncTaskResponse contains the common fields shared by all asynchronous task responses.
 type AsyncTaskResponse struct {
-	core.TaskBillingFacts
+	Usage *core.TaskUsage `json:"usage,omitempty"`
 	ID     string     `json:"id"`
 	Status TaskStatus `json:"status"`
 	Error  string     `json:"error,omitempty"`

@@ -92,10 +92,8 @@ def test_audio_to_video_create_posts_compacted_body():
                 "source_audio_url": "https://cdn.runapi.ai/public/samples/voice.mp3",
                 "prompt": "A presenter speaks naturally to camera",
                 "output_resolution": "720p",
-                "enable_fast_mode": True,
-            },
-        ),
-    ]
+                "enable_fast_mode": True},
+        )]
     assert isinstance(result, AudioToVideoResponse)
     assert result.id == "t1"
 
@@ -110,7 +108,7 @@ def test_audio_to_video_get_fetches_by_id():
 def test_audio_to_video_run_polls_and_narrows_completed_type():
     fake = FakeHttp(
         {"id": "t1", "status": "pending"},
-        {"id": "t1", "status": "completed", "videos": [{"url": "https://x/y.mp4"}]},
+        {"id": "t1", "status": "completed", "usage": {"cost": 0.05}, "videos": [{"url": "https://x/y.mp4"}]},
     )
     client = OmnihumanClient(api_key="k", http_client=fake)
     result = client.audio_to_video.run(**VALID_AUDIO_PARAMS)
@@ -123,7 +121,7 @@ def test_audio_to_video_run_polls_and_narrows_completed_type():
 def test_human_identification_create_and_get():
     fake = FakeHttp(
         {"id": "human_1", "status": "pending"},
-        {"id": "human_1", "status": "completed", "subject_status": 1},
+        {"id": "human_1", "status": "completed", "usage": {"cost": 0.05}, "subject_status": 1},
     )
     client = OmnihumanClient(api_key="k", http_client=fake)
     task = client.human_identification.create(
@@ -137,8 +135,7 @@ def test_human_identification_create_and_get():
         "/api/v1/omnihuman/human_identification",
         {
             "model": "omnihuman-1.5-human-identification",
-            "source_image_url": "https://cdn.runapi.ai/public/samples/portrait.jpg",
-        },
+            "source_image_url": "https://cdn.runapi.ai/public/samples/portrait.jpg"},
     )
     assert fake.calls[1] == ("get", "/api/v1/omnihuman/human_identification/human_1", None)
     assert isinstance(result, HumanIdentificationResponse)
@@ -148,7 +145,7 @@ def test_human_identification_create_and_get():
 def test_human_identification_run_polls_and_narrows_completed_type():
     fake = FakeHttp(
         {"id": "human_1", "status": "pending"},
-        {"id": "human_1", "status": "completed", "subject_status": 1},
+        {"id": "human_1", "status": "completed", "usage": {"cost": 0.05}, "subject_status": 1},
     )
     client = OmnihumanClient(api_key="k", http_client=fake)
     result = client.human_identification.run(
@@ -163,7 +160,7 @@ def test_human_identification_run_polls_and_narrows_completed_type():
 def test_subject_detection_create_and_get():
     fake = FakeHttp(
         {"id": "mask_1", "status": "pending"},
-        {"id": "mask_1", "status": "completed", "masks": [{"url": "https://x/mask.png"}]},
+        {"id": "mask_1", "status": "completed", "usage": {"cost": 0.05}, "masks": [{"url": "https://x/mask.png"}]},
     )
     client = OmnihumanClient(api_key="k", http_client=fake)
     task = client.subject_detection.create(
@@ -177,8 +174,7 @@ def test_subject_detection_create_and_get():
         "/api/v1/omnihuman/subject_detection",
         {
             "model": "omnihuman-1.5-subject-detection",
-            "source_image_url": "https://cdn.runapi.ai/public/samples/portrait.jpg",
-        },
+            "source_image_url": "https://cdn.runapi.ai/public/samples/portrait.jpg"},
     )
     assert fake.calls[1] == ("get", "/api/v1/omnihuman/subject_detection/mask_1", None)
     assert isinstance(result, SubjectDetectionResponse)
@@ -188,7 +184,7 @@ def test_subject_detection_create_and_get():
 def test_subject_detection_run_polls_and_narrows_completed_type():
     fake = FakeHttp(
         {"id": "mask_1", "status": "pending"},
-        {"id": "mask_1", "status": "completed", "masks": [{"url": "https://x/mask.png"}]},
+        {"id": "mask_1", "status": "completed", "usage": {"cost": 0.05}, "masks": [{"url": "https://x/mask.png"}]},
     )
     client = OmnihumanClient(api_key="k", http_client=fake)
     result = client.subject_detection.run(

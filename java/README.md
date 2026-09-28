@@ -34,7 +34,7 @@ Use the BOM when multiple RunAPI Java modules are installed:
 
 ```kotlin
 dependencies {
-  implementation(platform("ai.runapi:runapi-bom:0.6.2"))
+  implementation(platform("ai.runapi:runapi-bom:0.7.0"))
   implementation("ai.runapi:runapi-omnihuman")
 }
 ```
