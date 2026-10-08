@@ -2,7 +2,7 @@
 
 [![Maven Central](https://img.shields.io/maven-central/v/ai.runapi/runapi-omnihuman)](https://central.sonatype.com/artifact/ai.runapi/runapi-omnihuman)
 
-The OmniHuman Java SDK is the language-specific package for OmniHuman on RunAPI. Use it when your Java application needs typed builders, strict request validation, task status lookup, local polling helpers, file uploads, account helpers, and consistent RunAPI errors for OmniHuman workflows.
+The OmniHuman Java SDK is the language-specific package for OmniHuman on RunAPI. Use it when your Java application needs typed builders, server-side request validation, task status lookup, local polling helpers, file uploads, account helpers, and consistent RunAPI errors for OmniHuman workflows.
 
 This README is the Java package guide inside the public `omnihuman-sdk` repository. For the repository overview, start at `../README.md`; for model details, use https://runapi.ai/models/omnihuman; for API reference, use https://runapi.ai/docs/api/omnihuman/audio-to-video; for SDK docs, use https://runapi.ai/docs/resources/sdks.
 
@@ -16,7 +16,7 @@ Gradle:
 
 ```kotlin
 dependencies {
-  implementation("ai.runapi:runapi-omnihuman:0.1.3")
+  implementation("ai.runapi:runapi-omnihuman:0.2.0")
 }
 ```
 
@@ -26,7 +26,7 @@ Maven:
 <dependency>
   <groupId>ai.runapi</groupId>
   <artifactId>runapi-omnihuman</artifactId>
-  <version>0.1.3</version>
+  <version>0.2.0</version>
 </dependency>
 ```
 
@@ -34,7 +34,7 @@ Use the BOM when multiple RunAPI Java modules are installed:
 
 ```kotlin
 dependencies {
-  implementation(platform("ai.runapi:runapi-bom:0.7.0"))
+  implementation(platform("ai.runapi:runapi-bom:0.9.0"))
   implementation("ai.runapi:runapi-omnihuman")
 }
 ```

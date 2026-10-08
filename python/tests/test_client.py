@@ -1,7 +1,7 @@
 import pytest
 
 from runapi.core import config
-from runapi.core.errors import AuthenticationError, ValidationError
+from runapi.core.errors import AuthenticationError
 from runapi.omnihuman import OmnihumanClient
 from runapi.omnihuman.resources.audio_to_video import AudioToVideo
 from runapi.omnihuman.resources.human_identification import HumanIdentification
@@ -194,17 +194,3 @@ def test_subject_detection_run_polls_and_narrows_completed_type():
 
     assert isinstance(result, CompletedSubjectDetectionResponse)
     assert result.masks[0].url == "https://x/mask.png"
-
-
-def test_audio_to_video_requires_model():
-    client = OmnihumanClient(api_key="k", http_client=FakeHttp())
-    params = {k: v for k, v in VALID_AUDIO_PARAMS.items() if k != "model"}
-    with pytest.raises(ValidationError, match="model must be one of: omnihuman-1.5"):
-        client.audio_to_video.create(**params)
-
-
-def test_audio_to_video_rejects_invalid_resolution():
-    client = OmnihumanClient(api_key="k", http_client=FakeHttp())
-    params = {**VALID_AUDIO_PARAMS, "output_resolution": "480p"}
-    with pytest.raises(ValidationError, match="output_resolution must be one of: 720p, 1080p"):
-        client.audio_to_video.create(**params)

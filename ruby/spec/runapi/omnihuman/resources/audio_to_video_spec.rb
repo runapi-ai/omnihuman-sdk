@@ -28,15 +28,4 @@ RSpec.describe RunApi::Omnihuman::Resources::AudioToVideo do
     result = resource.get("task-1")
     expect(result.status).to eq("completed")
   end
-
-  it "raises ValidationError for invalid output_resolution" do
-    expect {
-      resource.create(
-        model: "omnihuman-1.5",
-        source_image_url: "https://cdn.runapi.ai/public/samples/portrait.jpg",
-        source_audio_url: "https://cdn.runapi.ai/public/samples/voice.mp3",
-        output_resolution: "480p"
-      )
-    }.to raise_error(RunApi::Core::ValidationError, /output_resolution must be one of: 720p, 1080p/)
-  end
 end

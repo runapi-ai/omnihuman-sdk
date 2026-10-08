@@ -60,9 +60,6 @@ type AudioToVideo struct{ http core.HTTPClient }
 func (r *AudioToVideo) Create(ctx context.Context, params AudioToVideoParams, opts ...option.RequestOption) (*core.TaskCreateResponse, error) {
 	requestOptions, _ := option.ResolveRequestOptions(opts...)
 	body := core.CompactParams(params)
-	if err := core.ValidateParams(contractSchema["audio-to-video"], body); err != nil {
-		return nil, err
-	}
 	return core.PostJSON[core.TaskCreateResponse](ctx, r.http, audioToVideoPath, body, requestOptions)
 }
 
@@ -84,9 +81,6 @@ type HumanIdentification struct{ http core.HTTPClient }
 func (r *HumanIdentification) Create(ctx context.Context, params HumanIdentificationParams, opts ...option.RequestOption) (*core.TaskCreateResponse, error) {
 	requestOptions, _ := option.ResolveRequestOptions(opts...)
 	body := core.CompactParams(params)
-	if err := core.ValidateParams(contractSchema["human-identification"], body); err != nil {
-		return nil, err
-	}
 	return core.PostJSON[core.TaskCreateResponse](ctx, r.http, humanIdentificationPath, body, requestOptions)
 }
 
@@ -108,9 +102,6 @@ type SubjectDetection struct{ http core.HTTPClient }
 func (r *SubjectDetection) Create(ctx context.Context, params SubjectDetectionParams, opts ...option.RequestOption) (*core.TaskCreateResponse, error) {
 	requestOptions, _ := option.ResolveRequestOptions(opts...)
 	body := core.CompactParams(params)
-	if err := core.ValidateParams(contractSchema["subject-detection"], body); err != nil {
-		return nil, err
-	}
 	return core.PostJSON[core.TaskCreateResponse](ctx, r.http, subjectDetectionPath, body, requestOptions)
 }
 

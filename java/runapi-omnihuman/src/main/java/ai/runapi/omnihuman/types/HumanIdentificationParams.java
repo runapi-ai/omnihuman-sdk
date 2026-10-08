@@ -12,7 +12,7 @@ public final class HumanIdentificationParams {
 
   private HumanIdentificationParams(Builder builder) {
     this.model = builder.model;
-    this.sourceImageUrl = OmnihumanParamUtils.requireNonBlank(builder.sourceImageUrl, "sourceImageUrl");
+    this.sourceImageUrl = builder.sourceImageUrl;
     this.callbackUrl = builder.callbackUrl;
   }
 
@@ -53,20 +53,20 @@ public final class HumanIdentificationParams {
 
     /** Sets the model slug using a string value. */
     public Builder model(String value) {
-      this.model = OmnihumanParamUtils.requireNonBlankTrim(value, "model");
+      this.model = value;
       return this;
     }
 
 
     /** Sets the source image URL. */
     public Builder sourceImageUrl(String value) {
-      this.sourceImageUrl = OmnihumanParamUtils.requireNonBlank(value, "sourceImageUrl");
+      this.sourceImageUrl = value;
       return this;
     }
 
     /** Sets the webhook URL for task completion notifications. */
     public Builder callbackUrl(String value) {
-      this.callbackUrl = OmnihumanParamUtils.requireNonBlank(value, "callbackUrl");
+      this.callbackUrl = value;
       return this;
     }
 
